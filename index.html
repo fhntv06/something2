@@ -6,9 +6,16 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;300;500;700;900&display=swap" rel="stylesheet">
+
+	<!-- подключение шрифтов перенесено в main.css -->
+	<!-- <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;300;500;700;900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Wire+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Wire+One&display=swap" rel="stylesheet"> -->
+
+	<!-- подключение animate.css -->
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+	<link rel="stylesheet" href="/animate.css/node_modules/animate.css/animate.min.css"/>
+
 
 	<link rel="stylesheet" href="css/main.css">
 </head>
@@ -30,7 +37,7 @@
 			</div>
 			<div class="navigation-right">
 				<button class="btn">Написать мне</button>
-				<span class="navigation-text">+7-908-946-1483</span>
+				<span class="navigation-text"><a href="tel:890899461483">+7-908-946-14-83</a></span>
 			</div>
 		</nav>
 
@@ -86,7 +93,7 @@
 			</div>
 			<div class="navigation-right">
 				<button class="btn">Написать мне</button>
-				<span class="navigation-text">+7-908-946-1483</span>
+				<span class="navigation-text"><a href="tel:890899461483">+7-908-946-14-83</a></span>
 			</div>
 		</nav>
 	</header>
@@ -97,7 +104,7 @@
 
 
 			<div class="container-text" id="about">
-				<h1 class="content-text-1">About me</h1>
+				<h2 class="content-text-1">About me</h2>
 				<h3>Skills</h3>	
 			</div>
 			
@@ -222,7 +229,7 @@
 		<!-- Конец: Блок about -->
 		<!-- Начало: Блок works -->
 		<div class="container-works">
-			<h1 id="project" class="content-text-1">Portfolio:</h1>
+			<h2 id="project" class="content-text-1">Portfolio</h2>
 			<div class="slider__warpper">
 			  <div class="flex__container flex--pikachu flex--active" data-slide="1">
 			    <div class="flex__item flex__item--left">
@@ -306,17 +313,17 @@
 		<!-- Начало: Блок contact -->
 		<div class="container-contact">
 			<div class="container-contact-content">
-				<h1 id="contact" class="content-text-1">Contact</h1>
+				<h2 id="contact" class="content-text-1">Contact</h2>
 				<ul class="contact-directions">
 					<li class="contact-direction contact-direction-left">
 						<div class="direction">
 							<img src="img/icon/phone.svg" class="icon icon-phone" alt="Phone picture">
-							<p class="direction-text direction-text-phone">+7-908-946-1483</p> 
+							<p class="direction-text direction-text-phone"><a href="tel:89089461483">+7-908-946-14-83</a></p> 
 						</div>
 
 						<div class="direction">
 							<img src="img/icon/email.svg" class="icon icon-email" alt="Email picture">
-							<span class="direction-text">fhntv1357246@mail.ru</span>
+							<span class="direction-text"><a href="mailto:fhntv1357246@mail.ru">fhntv1357246@mail.ru</a></span>
 						</div>
 					</li>
 					<li class="contact-direction contact-direction-right">
@@ -375,109 +382,109 @@
   	<div class="container-modal">
 	  	<div class="modal-dialog">
 		  	<form id="form-modal-feedback" class="form">
-					<div>
-						<p class="content-text-1">Contact us today, and get a reply within 24 hours!</p>
-						<p class="content-text-2">Pls, write in the feedback form.</p>
-					</div>
-					<br>
-					<!-- Hidden Required Fields -->
-					<input type="hidden" name="project_name" value="KAS@company">
-					<input type="hidden" name="admin_email" value="admin@verstka.kl.com.ua">
-					<input type="hidden" name="form_subject" value="Form modal">
-					<!-- END Hidden Required Fields -->
+				<div>
+					<h2 class="content-text-1">Contact us today, and get a reply within 24 hours!</h2>
+					<h3 class="content-text-2">Pls, write in the feedback form.</h3>
+				</div>
+				<br>
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="KAS@company">
+				<input type="hidden" name="admin_email" value="admin@verstka.kl.com.ua">
+				<input type="hidden" name="form_subject" value="Form modal">
+				<!-- END Hidden Required Fields -->
 
-					<div class="container-contacts-panel">
-						<div class="panel-contant-footer">
-							<div class="panel-inputs panel-inputs-contacts">
-								<div class="panel-input-left">
-									<div class="panel-content">
-										<p>Name:</p>
-										<input class="input" type="text" name="Имя" placeholder="Name" required>
-									</div>
-									<div class="panel-content">
-										<p>Email:</p>
-										<input class="input" type="text" name="Email" placeholder="E-mail" required>
-									</div>
+				<div class="container-contacts-panel">
+					<div class="panel-contant-footer">
+						<div class="panel-inputs panel-inputs-contacts">
+							<div class="panel-input-left">
+								<div class="panel-content">
+									<p>Name:</p>
+									<input class="input" type="text" name="Имя" placeholder="Name" required>
 								</div>
-								<div class="panel-input-right">
-									<div class="panel-content">
-										<p>Message:</p>
-										<textarea id="textarea" class="input" name="Сообщение" cols="30" rows="10" placeholder="Message"></textarea>
-									</div>
+								<div class="panel-content">
+									<p>Email:</p>
+									<input class="input" type="text" name="Email" placeholder="E-mail" required>
 								</div>
 							</div>
-							<button id="btnModal" class="panel-button">Send</button>
+							<div class="panel-input-right">
+								<div class="panel-content">
+									<p>Message:</p>
+									<textarea id="textarea" class="input" name="Сообщение" cols="30" rows="10" placeholder="Message"></textarea>
+								</div>
+							</div>
 						</div>
+						<button id="btnModal" class="panel-button">Send</button>
 					</div>
+				</div>
 					
 				
-			<h1 class="modal-dialog-bottom-text content-text-1">Are you happy that you came?</h1>
-	        <ul class="feedback">
-	            <li class="angry">
-	                <div id="angry">
-	                    <svg class="eye left">
-	                        <use xlink:href="#eye">
-	                    </svg>
-	                    <svg class="eye right">
-	                        <use xlink:href="#eye">
-	                    </svg>
-	                    <svg class="mouth">
-	                        <use xlink:href="#mouth">
-	                    </svg>
-	                </div>
-	            </li>
-	            <li class="sad">
-	                <div id="sad">
-	                    <svg class="eye left">
-	                        <use xlink:href="#eye">
-	                    </svg>
-	                    <svg class="eye right">
-	                        <use xlink:href="#eye">
-	                    </svg>
-	                    <svg class="mouth">
-	                        <use xlink:href="#mouth">
-	                    </svg>
-	                </div>
-	            </li>
-	            <li class="ok">
-	                <div id="ok"></div>
-	            </li>
-	            <li class="good">
-	                <div id="good">
-	                    <svg class="eye left">
-	                        <use xlink:href="#eye">
-	                    </svg>
-	                    <svg class="eye right">
-	                        <use xlink:href="#eye">
-	                    </svg>
-	                    <svg class="mouth">
-	                        <use xlink:href="#mouth">
-	                    </svg>
-	                </div>
-	            </li>
-	            <li class="happy active">
-	                <div id="happy">
-	                    <svg class="eye left">
-	                        <use xlink:href="#eye">
-	                    </svg>
-	                    <svg class="eye right">
-	                        <use xlink:href="#eye">
-	                    </svg>
-	                </div>
-	            </li>
-	        </ul>
-	        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-		        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 4" id="eye">
-		            <path d="M1,1 C1.83333333,2.16666667 2.66666667,2.75 3.5,2.75 C4.33333333,2.75 5.16666667,2.16666667 6,1"></path>
-		        </symbol>
-		        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 7" id="mouth">
-		            <path d="M1,5.5 C3.66666667,2.5 6.33333333,1 9,1 C11.6666667,1 14.3333333,2.5 17,5.5"></path>
-		        </symbol>
-	   		 </svg>
-	   		 <input class="modal-dialog-bottom-text-innerHTML modal-dialog-bottom-text" name="Настроение" readonly required>
-   		 	<button  class="form-button panel-button ">Come back!
-				<img class="form-img-arrow" src="./img/arrow_white.webp" alt="Arrow picture">
-			</button>	
+				<h2 class="modal-dialog-bottom-text content-text-1">Are you happy that you came?</h2>
+				<ul class="feedback">
+					<li class="angry">
+						<div id="angry">
+							<svg class="eye left">
+								<use xlink:href="#eye">
+							</svg>
+							<svg class="eye right">
+								<use xlink:href="#eye">
+							</svg>
+							<svg class="mouth">
+								<use xlink:href="#mouth">
+							</svg>
+						</div>
+					</li>
+					<li class="sad">
+						<div id="sad">
+							<svg class="eye left">
+								<use xlink:href="#eye">
+							</svg>
+							<svg class="eye right">
+								<use xlink:href="#eye">
+							</svg>
+							<svg class="mouth">
+								<use xlink:href="#mouth">
+							</svg>
+						</div>
+					</li>
+					<li class="ok">
+						<div id="ok"></div>
+					</li>
+					<li class="good">
+						<div id="good">
+							<svg class="eye left">
+								<use xlink:href="#eye">
+							</svg>
+							<svg class="eye right">
+								<use xlink:href="#eye">
+							</svg>
+							<svg class="mouth">
+								<use xlink:href="#mouth">
+							</svg>
+						</div>
+					</li>
+					<li class="happy active">
+						<div id="happy">
+							<svg class="eye left">
+								<use xlink:href="#eye">
+							</svg>
+							<svg class="eye right">
+								<use xlink:href="#eye">
+							</svg>
+						</div>
+					</li>
+				</ul>
+				<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+					<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 4" id="eye">
+						<path d="M1,1 C1.83333333,2.16666667 2.66666667,2.75 3.5,2.75 C4.33333333,2.75 5.16666667,2.16666667 6,1"></path>
+					</symbol>
+					<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 7" id="mouth">
+						<path d="M1,5.5 C3.66666667,2.5 6.33333333,1 9,1 C11.6666667,1 14.3333333,2.5 17,5.5"></path>
+					</symbol>
+				</svg>
+				<input class="modal-dialog-bottom-text-innerHTML modal-dialog-bottom-text" name="Настроение" readonly required>
+				<a class="form-button panel-button ">Come back!
+					<img class="form-img-arrow" src="./img/arrow_white.webp" alt="Arrow picture">
+				</a>	
 			</form>
 	    </div>
     </div>   
@@ -485,20 +492,10 @@
     <div id="back-top">
 		<a href="#" onclick="return up()">ВВЕРХ</a>  
 	</div>            
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
 	
-	<script  src="./js/modal-script.js"></script>
-	
-	<script type="text/javascript" src="./js/javascript.js"></script>
-	<script type="text/javascript" src="./js/slider.js"></script>
-	<script type="text/javascript" src="./js/formFeedBack-script.js"></script>
-
-	<script type="text/javascript" src="./js/css_St.js"></script>
-	<script type="text/javascript" src="./js/html_St.js"></script>
-	<script type="text/javascript" src="./js/js_St.js"></script>
-
-	<script  src="./js/crossbrowser-script.js"></script>
+	<!-- подключение jquery -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> -->
+	<script src="/js/jquery.min-2.2.0.js"></script>
 
 	<script src="./js/main.js"></script>
 
