@@ -1,3 +1,15 @@
+@font-face{
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', MuseoModerno, Roboto,  Wire One, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  src: url("/fonts/MuseoModerno/MuseoModerno.ttf");
+  src: url("/fonts/Roboto/Roboto.ttf");
+  src: url("/fonts/WireOne/WireOne.ttf");
+
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* style */
 *{
 	margin: 0;
@@ -572,9 +584,10 @@ h3{
 .form {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin-top: 25px;
-}
+    width: 70%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
 
 .panel-contant-footer {
     display: flex;
@@ -587,7 +600,7 @@ h3{
 .panel-inputs-contacts {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
 }
 
 .panel-input-left {
@@ -902,7 +915,7 @@ h3{
     width: 100%;
     height: 100%;
     margin: auto;
-    padding: 40px 45px;
+    padding: 0;
     background: linear-gradient(90deg, rgb(30, 136, 229) 100%, rgba(63, 81, 181, .75) 100%);
   }
   
@@ -919,18 +932,13 @@ h3{
     border: none;
   }
   .form-button {
-    position: relative;
-    top: 10%;
-    left: 90%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 100px;
+    justify-content: unset;
+    align-self: flex-end;
+    width: max-content;
   }
   .form-img-arrow {
-    height: 60%;
-    width: 30%;
+    max-width: 20px;
   }
   
   
