@@ -275,7 +275,7 @@ function up() {
 function move() {
     var elem = document.getElementById("htmlBar"); 
     var width = 1;
-    var id = setInterval(frame, 10);
+    var id = setInterval(frame, 100);
     function frame() {
         if (width >= 75) {
             clearInterval(id);
@@ -286,9 +286,9 @@ function move() {
     }
 }
 function move2() {
-    var elem = document.getElementById("cssBar"); 
+    var elem = document.getElementById("cssBar");   
     var width = 1;
-    var id = setInterval(frame, 10);
+    var id = setInterval(frame, 100);
     function frame() {
         if (width >= 65) {
             clearInterval(id);
@@ -301,7 +301,7 @@ function move2() {
 function move3() {
     var elem = document.getElementById("jsBar"); 
     var width = 1;
-    var id = setInterval(frame, 10);
+    var id = setInterval(frame, 100);
     function frame() {
         if (width >= 50) {
             clearInterval(id);
@@ -314,7 +314,7 @@ function move3() {
 function move4() {
     var elem = document.getElementById("jqBar"); 
     var width = 1;
-    var id = setInterval(frame, 10);
+    var id = setInterval(frame, 100);
     function frame() {
         if (width >= 45) {
             clearInterval(id);
@@ -327,7 +327,7 @@ function move4() {
 function move5() {
     var elem = document.getElementById("bootBar"); 
     var width = 1;
-    var id = setInterval(frame, 10);
+    var id = setInterval(frame, 100);
     function frame() {
         if (width >= 30) {
             clearInterval(id);
@@ -350,25 +350,95 @@ const modalDialogBottomTextInnerHTML = document.querySelector(".modal-dialog-bot
 const containerModal = document.querySelector(".container-modal");
 const btn = document.querySelectorAll(".btn");
 const formButton = document.querySelector(".form-button");
+const main = document.querySelector(".main");
+
+let activeArray = [containerModal, header, main];
 
 // закрытие modal
 function modalNoActive(){
-	containerModal.style.display = "";
-	body.style.overflowY = "";
-	input.value = "";
+
+  for(let i = 0; i < activeArray.length; i++){
+    activeArray[i].classList.add("animate__animated");
+
+    activeArray[0].classList.add("animate__fadeOutRight");
+    activeArray[0].style.setProperty('--animate-duration', '2.25s');
+    activeArray[0].style.setProperty('animation-timing-function', 'ease');
+
+  }
+
+  for(let i = 1; i < activeArray.length; i++){
+    activeArray[i].classList.add("animate__fadeInLeft");
+    activeArray[i].classList.add("animate__slow");
+
+  }
+  
+  setTimeout(()=>{
+    for(let i = 0; i < activeArray.length; i++){
+      activeArray[i].classList.remove("animate__animated");
+      activeArray[i].classList.remove("animate__fadeInLeft");
+      activeArray[i].classList.remove("animate__slow");
+      activeArray[i].classList.remove("animate__fadeOutRight");
+      activeArray[0].style.removeProperty('--animate-duration', '2.25s');
+      activeArray[0].style.removeProperty('animation-timing-function', 'ease');
+
+      activeArray[0].style.display = "";
+      btn[0].removeAttribute("disabled");
+      btn[1].removeAttribute("disabled");
+    }
+  }, 2100);
+  
+  input.value = "";
+  
 }
 // открытие modal
 function modalActive(){
-	containerModal.style.display = "block";
-	body.style.overflowY = "hidden ";
-	formButton.addEventListener("click", modalNoActive);
+  formButton.setAttribute("disabled", "disabled");
+  btn[0].setAttribute("disabled", "disabled");
+  btn[1].setAttribute("disabled", "disabled");
+
+  for(let i = 0; i < activeArray.length; i++){
+    activeArray[i].classList.add("animate__animated");
+
+    activeArray[0].classList.add("animate__fadeInLeft");
+    activeArray[0].style.setProperty('--animate-duration', '1.75s');
+    activeArray[0].style.setProperty('animation-timing-function', 'ease');
+
+
+  }
+
+  for(let i = 1; i < activeArray.length; i++){
+    activeArray[i].classList.add("animate__fadeOutRight");
+    activeArray[i].classList.add("animate__slow");
+
+  }
+  
+  setTimeout(()=>{
+    for(let i = 0; i < activeArray.length; i++){
+      activeArray[i].classList.remove("animate__animated");
+      activeArray[i].classList.remove("animate__fadeInLeft");
+      activeArray[i].classList.remove("animate__slow");
+      activeArray[i].classList.remove("animate__fadeOutRight");
+
+      activeArray[0].style.removeProperty('--animate-duration', '1.75s');
+      activeArray[0].style.removeProperty('animation-timing-function', 'ease');
+
+      formButton.removeAttribute("disabled");
+
+    }
+  }, 2100);
+  
+	activeArray[0].style.display = "block";
 	modalDialogBottomTextInnerHTML.value = "I'm happy! (￣▽￣)";
+
 }
 
-// для верхней кнопки
+// для верхней кнопки "Написать нам"
 btn[0].addEventListener("click", modalActive);
-// для нижней кнопки
+// для нижней кнопки "Написать нам"
 btn[1].addEventListener("click", modalActive);
+// скрыть модальное окно
+formButton.addEventListener("click", modalNoActive);
+
 // работа с эмоджи
 document.querySelectorAll('.feedback li').forEach(entry => entry.addEventListener('click', e => {
 	const angry = document.querySelector("#angry");
