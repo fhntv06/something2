@@ -29,6 +29,92 @@ function nextDevice(event){
 buttonRight.addEventListener("click", nextDevice);
 buttonLeft.addEventListener("click", nextDevice);
 
+// форма обратной связи
+$(document).ready(function() {
+  // для bottom
+      //E-mail Ajax Send
+      $("#form-bottom-feedback").submit(function() { //Change
+          var th = $(this);
+          $.ajax({
+              type: "POST",
+              url: "mail.php", //Change
+              data: th.serialize()
+          }).done(function() {
+              alert("POST!");
+              setTimeout(function() {
+                  // Done Functions
+                  th.trigger("reset");
+              }, 1000);
+          });
+          return false;
+      });
+  // для modal form
+      //E-mail Ajax Send
+      $("#form-modal-feedback").submit(function() { //Change
+          var th = $(this);
+          $.ajax({
+              type: "POST",
+              url: "mail.php", //Change
+              data: th.serialize()
+          }).done(function() {
+              alert("Thank you!");
+              setTimeout(function() {
+                  // Done Functions
+                  th.trigger("reset");
+              }, 1000);
+          });
+          return false;
+      });
+  });
+
+// container-nickname
+function viewNickname(){
+  $("#text-nickname").fadeOut(1000).fadeIn(1000).fadeOut(1000).fadeIn(1000).fadeOut(900); // 5s
+  setTimeout(()=>{  
+     consoleText(["K.Artech"], 
+     'text-nickname',['white']); // начала печатает string1, затем string2 и т.д.
+    function consoleText(words, id, colors) {
+      if (colors === undefined){
+        colors = ['#fff'];  
+      } 
+      var visible = true;
+      var con = document.getElementById('console-css');
+      var letterCount = 1;
+      var x = 1;
+      var waiting = false;  // ожидание после прохождения кода вперед и назад
+      var target = document.getElementById(id)
+      target.setAttribute('style', 'color:' + colors[0])
+      window.setInterval(function() {
+        if (letterCount === 0 && waiting === false) {
+          waiting = true; 
+          target.innerHTML = words[0].substring(0, letterCount)
+          window.setTimeout(function() {
+            var usedColor = colors.shift();
+            colors.push(usedColor);
+            var usedWord = words.shift();
+            words.push(usedWord);
+            x = 1;
+            target.setAttribute('style', 'color:' + colors[0])
+            letterCount += x;
+            waiting = false;
+          }, 1000)
+        } else if (letterCount === words[0].length + 1 && waiting === false) {
+          waiting = false; // true - печать вперед-назад,false - печать вперед
+          window.setTimeout(function() {
+            x = -1;
+            letterCount += x;
+            waiting = true; // false - печать вперед-назад, true - печать вперед
+          }, 1000 )//скорость печатания строк 
+        } else if (waiting === false) {
+          target.innerHTML = words[0].substring(0, letterCount)
+          letterCount += x;
+        }
+      }, 1500) // скорость печати каждой буквы
+        }
+      }, 5000);
+  }
+viewNickname();
+
 //css_St
 function viewCSS(){
     $("#text-css").fadeOut(1000).fadeIn(1000).fadeOut(1000).fadeIn(1000).fadeOut(900); // 5s
@@ -77,43 +163,6 @@ function viewCSS(){
     }
 viewCSS();
 
-// форма обратной связи
-$(document).ready(function() {
-    // для bottom
-        //E-mail Ajax Send
-        $("#form-bottom-feedback").submit(function() { //Change
-            var th = $(this);
-            $.ajax({
-                type: "POST",
-                url: "mail.php", //Change
-                data: th.serialize()
-            }).done(function() {
-                alert("POST!");
-                setTimeout(function() {
-                    // Done Functions
-                    th.trigger("reset");
-                }, 1000);
-            });
-            return false;
-        });
-    // для modal form
-        //E-mail Ajax Send
-        $("#form-modal-feedback").submit(function() { //Change
-            var th = $(this);
-            $.ajax({
-                type: "POST",
-                url: "mail.php", //Change
-                data: th.serialize()
-            }).done(function() {
-                alert("Thank you!");
-                setTimeout(function() {
-                    // Done Functions
-                    th.trigger("reset");
-                }, 1000);
-            });
-            return false;
-        });
-    });
 
 //html_St
 function viewHTML(){
@@ -122,7 +171,7 @@ function viewHTML(){
             const outText = document.querySelector(".out-text");
             // код для перебора кода на консоли
             // function([string1, string2],target id,[color1,color2])   
-             consoleText(["1_&lt!DOCTYPE html&gt <br> 2_&lthtml lang='en'&gt <br> 3_&lthead&gt <br> 4____&lttitle&gtHello  World!&lt/title&gt <br> 5____&ltmeta charset='utf-8'&gt <br> 6____&ltlink href='https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;300;500;700;900&display=swap' rel='stylesheet'&gt <br> 7____&ltlink rel='stylesheet' type='text/css' href='./css/style.css'&gt <br> 8_&lt/head&gt <br> 9_&ltbody&gt <br> 10___&ltdiv class='main'&gt <br> 11_______&ltdiv class='main-content'&gt  <br> 12___________&lth1&gt &lt /h1&gt <br> 13_______&lt/div&gt <br> 14___&lt/div&gt <br> 15___&ltscript src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js'&gt&lt/script&gt <br> 16___&ltscript type='text/javascript' src='./js/main.js'&gt&lt/script&gt <br> 17_&lt/body&gt <br> 18_&lt/html&gt"], 
+             consoleText(["1_&lt!DOCTYPE html&gt <br> 2_&lthtml lang='en'&gt <br> 3_&lthead&gt <br> 4____&lttitle&gtKAS@ company&lt/title&gt <br> 5____&ltmeta charset='utf-8'&gt <br> 6____&ltlink href='https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;300;500;700;900&display=swap' rel='stylesheet'&gt <br> 7____&ltlink rel='stylesheet' type='text/css' href='./css/style.css'&gt <br> 8_&lt/head&gt <br> 9_&ltbody&gt <br> 10___&ltdiv class='main'&gt <br> 11_______&ltdiv class='main-content'&gt  <br> 12___________&lth1&gt &lt /h1&gt <br> 13_______&lt/div&gt <br> 14___&lt/div&gt <br> 15___&ltscript src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js'&gt&lt/script&gt <br> 16___&ltscript type='text/javascript' src='./js/main.js'&gt&lt/script&gt <br> 17_&lt/body&gt <br> 18_&lt/html&gt"], 
               'text-html',['white']);
             function consoleText(words, id, colors) {
               if (colors === undefined){
@@ -171,7 +220,7 @@ viewHTML();
 function viewJS(){
   $("#text-js").fadeOut(1000).fadeIn(1000).fadeOut(1000).fadeIn(1000).fadeOut(900); // 9s
   setTimeout(()=>{  
-    consoleText(['// js <br> 1_H1 = document.querySelector("h1"); <br> 2_H1.innerHTML = "Hello World!"; <br><br> // jquery <br>'], 'text-js',['white']);
+    consoleText(['// js <br> 1_H1 = document.querySelector("h1"); <br> 2_H1.innerHTML = "K.Artech"; <br><br> // jquery <br>'], 'text-js',['white']);
 
     function consoleText(words, id, colors) {
     if (colors === undefined){
@@ -217,16 +266,21 @@ function viewJS(){
 };
 viewJS();
 
+const body = document.querySelector("body");
+
 const Navigation1 = document.querySelector(".navigation-1");
-const winHeightNav1 = window.outerHeight * 0.3;
-const winHeightNav2 = window.outerHeight * 5;
+const Navigation2 = document.querySelector(".navigation-2");
+
+const winHeightNav1 = body.offsetHeight * 0.12;
+const winHeightNav2 = body.offsetHeight * 0.7;
 const Navigation = document.querySelector(".navigation");
 $(document).ready(function(){ //Вызов функции по загрузке интерфейса
   var tempScrollTop, currentScrollTop = $(window).scrollTop(); //объявление переменных и присвоение им значений
   $(window).scroll(function(){ //Вызов функции при прокрутке страницы
     currentScrollTop = $(window).scrollTop(); //присвоение переменной нового значения
-      if(currentScrollTop > (winHeightNav1) / 5){
-        Navigation1.style.background = "#0000004d";
+
+      if( currentScrollTop > (winHeightNav1 / 5) ){
+        Navigation1.style.background = "#000000b3";
       }
       else{
         Navigation1.style.background = "";
@@ -234,7 +288,14 @@ $(document).ready(function(){ //Вызов функции по загрузке 
       if (currentScrollTop > winHeightNav1 ) { //Проверка условия 'переменная больше высоты шапки'
         $('.navigation-1').addClass('fixed-navigation-1'); // создание класса 'fixed-header' в селекторе 'body'
         if (currentScrollTop > (winHeightNav2) ) {
-          $('.navigation-2').addClass('fixed-navigation-2');   
+          $('.navigation-2').addClass('fixed-navigation-2');
+          
+          if( currentScrollTop > (winHeightNav2 + ( winHeightNav2 * 0.15 )) ){
+            Navigation2.style.background = "#000000b3";  
+          }
+          else{
+            Navigation2.style.background = "";
+          }
         }else{
           $('.navigation-2').removeClass('fixed-navigation-2');
         }
@@ -344,7 +405,6 @@ move4();
 move5();
 
 // modal!!
-const body = document.querySelector("body");
 const input = document.querySelector(".input");
 const modalDialogBottomTextInnerHTML = document.querySelector(".modal-dialog-bottom-text-innerHTML");
 const containerModal = document.querySelector(".container-modal");
@@ -495,4 +555,12 @@ $('.slide-nav').on('click', function(e) {
         $('.animate--end').addClass('animate--start').removeClass('animate--end flex--active');
         }, 800);
     }
+});
+
+// переход к разделам из меню
+$(".navigation").on("click","a", function (event) {
+    event.preventDefault();
+    let attr  = $(this).attr('href'),
+        top = $(attr).offset().top;
+    $('body,html').animate({scrollTop: top}, 1500);
 });

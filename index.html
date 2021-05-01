@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>KAS@company</title>
+	<title>K.Artech</title>
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,6 +42,14 @@
 		</nav>
 
 		<ul class="content-directions content-directions-parallax">
+			<li class="content-directions-item content-directions-position-left content-directions-position-correct">
+				<h3 class="direction-JS">JavaScript</h3>
+				<div class="content-direction content-direction-JS">
+					<div class='console-container'>
+						<span  class="direction-code" id='text-js'>Wait...</span>
+					</div>
+				</div>
+			</li>
 			<li class="content-directions-item content-directions-position-left">
 				<h3 class="direction-HTML">HTML</h3>
 				<div class="content-direction content-direction-HTML">
@@ -58,23 +66,18 @@
 					</div>
 				</div>
 			</li>
-			<li class="content-directions-item content-directions-position-left content-directions-position-correct">
-				<h3 class="direction-JS">JavaScript</h3>
-				<div class="content-direction content-direction-JS">
-					<div class='console-container'>
-						<span  class="direction-code" id='text-js'>Wait...</span>
-					</div>
-				</div>
-			</li>
 		</ul>
 
 		<div class="container-nickname">
 			<ul class="container-text">
-				<li ><p class="container-text-1">KAS@
-						<span class="container-text-2">company</span>
+				<li >
+					<p class="container-text-1" id="text-nickname">|
+						<!-- <span class="container-text-2">company</span> -->
 					</p>
 				</li>
-				<li ><p class="container-text-2">DESIGNER and DEVELOPMENT</p></li>
+				<li >
+					<p class="container-text-2">DESIGNER and DEVELOPMENT</p>
+				</li>
 			</ul>
 
 		</div>	
@@ -114,8 +117,8 @@
 						<hr>
 						<div class="container-item-left">
 							<div class="container-item-text">
-								<h1>HTML</h1>
-								<p class="item1-about container-item-text-about">Стандартизированный язык разметки документов во Всемирной паутине.</p>
+								<h2>HTML</h2>
+								<p class="item1-about container-item-text-about">Стандартизи&shy;рованный язык разметки документов во Всемирной паутине.</p>
 							</div>
 							<img src="./img/skills/html.webp" alt="HTML picture">
 						</div>
@@ -129,7 +132,7 @@
 						<hr>
 						<div class="container-item-left">
 							<div class="container-item-text">
-								<h1>CSS</h1>
+								<h2>CSS</h2>
 								<p class="item2-about container-item-text-about">Формальный язык описания внешнего вида документа, написанного с использованием языка разметки.</p>
 							</div>
 							<img src="./img/skills/css.webp" alt="CSS picture">
@@ -144,8 +147,8 @@
 						<hr>
 						<div class="container-item-left">
 							<div class="container-item-text">
-								<h1>JavaScript</h1>
-								<p class="item3-about container-item-text-about">Мультипарадигменный язык программирования.</p>
+								<h2>JavaScript</h2>
+								<p class="item3-about container-item-text-about">Мультипарадиг&shy;менный язык программи&shy;рования.</p>
 							</div>
 							<img src="./img/skills/javascript.webp" alt="JavaScript picture">
 						</div>
@@ -159,7 +162,7 @@
 						<hr>
 						<div class="container-item-left">
 							<div class="container-item-text">
-								<h1>Jquery</h1>
+								<h2>Jquery</h2>
 								<p class="item4-about container-item-text-about">Набор функций JavaScript, фокусирующийся на взаимодействии JavaScript и HTML.</p>
 							</div>
 							<img src="./img/skills/jquery.webp" alt="Jquery picture">
@@ -174,7 +177,7 @@
 						<hr>
 						<div class="container-item-left">
 							<div class="container-item-text">
-								<h1>Bootstrap</h1>
+								<h2>Bootstrap</h2>
 								<p class="item5-about container-item-text-about">Свободный набор инструментов для создания сайтов и веб-приложений. </p>
 							</div>
 							<img src="./img/skills/bootstrap.webp" alt="Bootstrap picture">
@@ -184,12 +187,21 @@
 								<div id="bootBar" class="Bar">30%</div>
 							</div>
 						</div>
-					</li>		
-				</ul>
-				<div class="container-item item6">
+					</li>	
+					<li class="container-item item7">
+						<hr>
 						<div class="container-item-left">
 							<div class="container-item-text">
-								<h1>Адаптивная верска</h1>
+								<h2>Кроссбраузерная верстка</h2>
+								<p class="item7-about container-item-text-about">Подход к разработке html-кода, который обеспечивает корректное отображается во всех существующих браузерах.</p>
+							</div>
+							<img class="earth" src="./img/skills/cross-browser/earth.webp" alt="Earth picture">
+						</div>
+					</li>	
+					<li class="container-item item6">
+						<div class="container-item-left">
+							<div class="container-item-text">
+								<h2>Адаптивная верска</h2>
 								<p class="item6-about container-item-text-about">Адаптивная верстка меняет дизайн страницы в зависимости от поведения пользователя, платформы, размера экрана и ориентации девайса и является неотъемлемой частью современной веб-разработки.</p>
 							</div>
 							<!-- слайдер в с прокруткой основных видов техники и чтобы там было написано их разрешение
@@ -204,17 +216,10 @@
 							  	</div>
 							</div>
 						</div>
-					</div>
-					<div class="container-item item7">
-						<div class="container-item-text">
-							<h1>Кроссбраузерная верстка</h1>
-							<p class="item7-about container-item-text-about">Подход к разработке html-кода, который обеспечивает корректное отображается во всех существующих браузерах.</p>
-						</div>
-						<div class="container-item-galaxy">
-							<img class="earth" src="./img/skills/cross-browser/earth.webp" alt="Earth picture">
-							
-						</div>
-					</div>
+					</li>
+					
+				</ul>
+				
 						
 						<!-- может сделать как на фото? пусть сателиты вращаются вокруг земли или по скролу-->	
 			</div>
@@ -231,12 +236,12 @@
 		<div class="container-works">
 			<h2 id="project" class="content-text-1">Portfolio</h2>
 			<div class="slider__warpper">
-			  <div class="flex__container flex--pikachu flex--active" data-slide="1">
+			  <div class="flex__container flex--first_work flex--active" data-slide="1">
 			    <div class="flex__item flex__item--left">
 			      <div class="flex__content">
 			        <a href="http://volonters-kuzstu.kl.com.ua"><p class="text--sub">http://volonters-kuzstu.kl.com.ua</p></a>
-			        <h1 class="text--big">Волонтерский центр "Пламя"
-			        </h1>
+			        <h2 class="text--big">Волонтерс&shy;кий центр "Пламя"
+			        </h2>
 			        <p class="text--normal">Организация волонтеров КузГТУ, тех, кто бескорыстно и добровольно помогает людям.</p>
 			      </div>
 			      <p class="text__background">Пламя</p>
@@ -249,7 +254,7 @@
 			    <div class="flex__item flex__item--left">
 			      <div class="flex__content">
 			        <a href="http://культпатруль.kl.com.ua/"><p class="text--sub">http://культпатруль.kl.com.ua/</p></a>
-			        <h1 class="text--big">Культурный Патруль Кемерово</h1>
+			        <h2 class="text--big">Культур&shy;ный Патруль Кемерово</h2>
 			        <p class="text--normal">Контролируем состояние объектов культурного наследия, которые нам дороги, и работаем с органами власти для реализации совместных инициатив.</p>
 			      </div>
 			      <p class="text__background">КультПатруль</p>
@@ -258,53 +263,51 @@
 			    <img class="pokemon__img" src="./img/slider/kultPatr.webp" alt="КультПатруль"/>
 			  </div>
 
-			  <div class="flex__container flex--blaziken animate--start" data-slide="3">
+			  <div class="flex__container flex--threeth_work animate--start" data-slide="3">
 			    <div class="flex__item flex__item--left">
 			      <div class="flex__content">
-			        <p class="text--sub">Pokemon Gen III</p>
-			        <h1 class="text--big">Blaziken</h1>
-			        <p class="text--normal">Blaziken is the Fire/Fighting-type Starter Pokémon of the Hoenn region, introduced in Generation III. Blaziken is a large, bipedal, humanoid bird-like Pokémon that resembles a rooster.</p>
+			        <a href="kosmos/"><p class="text--sub">kosmos/</p></a>
+			        <h2 class="text--big">Space today</h2>
+			        <p class="text--normal">Space today блог поддерживаемый одним разработчиком. NASA рекомендует, но это не точно.</p>
 			      </div>
-			      <p class="text__background">Blaziken</p>
+			      <p class="text__background">Космос</p>
 			    </div>
 			    <div class="flex__item flex__item--right"></div>
-			    <img class="pokemon__img" src="" alt="Blaziken"/>
+			    <img class="pokemon__img" src="/img/slider/imgSpaceToday.png" alt="Space today"/>
 			  </div>
 
 			  <div class="flex__container flex--dialga animate--start" data-slide="4">
 			    <div class="flex__item flex__item--left">
 			      <div class="flex__content">
-			        <p class="text--sub">Pokemon Gen IV</p>
-			        <h1 class="text--big">Dialga</h1>
-			        <p class="text--normal">Dialga is a Steel/Dragon-type Legendary Pokémon. Dialga is a sauropod-like Pokémon. It is mainly blue with some gray, metallic portions, such as its chest plate, which has a diamond in the center. It also has various, light blue lines all over
-			          its body.</p>
+			        <a href="#"><p class="text--sub">to be continued</p></a>
+			        <h2 class="text--big">Solar Galaxy</h2>
+			        <p class="text--normal">Solar Galaxy in your browser!</p>
 			      </div>
-			      <p class="text__background">Dialga</p>
+			      <p class="text__background">Galaxy</p>
 			    </div>
 			    <div class="flex__item flex__item--right"></div>
-			    <img class="pokemon__img" src="" alt="Dialga"/>
+			    <img class="pokemon__img" src="" alt="Solar Galaxy"/>
 			  </div>
 			  
 				<div class="flex__container flex--zekrom animate--start" data-slide="5">
 					<div class="flex__item flex__item--left">
 					  <div class="flex__content">
-					    <p class="text--sub">Pokemon Gen V</p>
-					    <h1 class="text--big">Zekrom</h1>
-					    <p class="text--normal">Zekrom is a Dragon/Electric-type Legendary Pokémon. It is part of the Tao Trio, along with Reshiram and Kyurem. Zekrom is a large, black draconian Pokémon that seems to share its theme with its counterpart, Reshiram. It has piercing red eyes and
-					      dark gray to black skin that seems to be armor-like.</p>
+					    <a href="#"><p class="text--sub">to be continued</p></a>
+					    <h2 class="text--big">Travel In Book</h2>
+					    <p class="text--normal"></p>
 					  </div>
-					  <p class="text__background">Zekrom</p>
+					  <p class="text__background">Travel world books adventure</p>
 					</div>
 					<div class="flex__item flex__item--right"></div>
-					<img class="pokemon__img" src="" alt="Zekrom"/>
+					<img class="pokemon__img" src="" alt="Travel In Book"/>
 				</div>
 
 				<div class="slider__navi">
-					<a href="#" class="slide-nav active" data-slide="1">pikachu</a>
-					<a href="#" class="slide-nav" data-slide="2">piplup</a>
-					<a href="#" class="slide-nav" data-slide="3">blaziken</a>
-					<a href="#" class="slide-nav" data-slide="4">dialga</a>
-					<a href="#" class="slide-nav" data-slide="5">zekrom</a>
+					<a href="#" class="slide-nav active" data-slide="1">Волонтерский центр "Пламя"</a>
+					<a href="#" class="slide-nav" data-slide="2">Культурный Патруль Кемерово</a>
+					<a href="#" class="slide-nav" data-slide="3">Space today</a>
+					<a href="#" class="slide-nav" data-slide="4">Solar Galaxy</a>
+					<a href="#" class="slide-nav" data-slide="5">Travel In Book</a>
 				</div>
 			</div>
 		</div>
